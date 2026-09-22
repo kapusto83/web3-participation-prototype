@@ -292,7 +292,11 @@ elif st.session_state.page == "result":
 
         with col1:
 
-            if st.button("Continue without wallet"):
+            if st.button(
+                "Continue without wallet",
+                type="primary",
+                use_container_width=True,
+            ):
 
                 log_once("completed")
 
@@ -306,7 +310,11 @@ elif st.session_state.page == "result":
 
         with col2:
 
-            if st.button("Connect wallet"):
+            if st.button(
+                "Connect wallet",
+                type="secondary",
+                use_container_width=True,
+            ):
 
                 log_once("wallet_connect_started")
 
@@ -317,7 +325,7 @@ elif st.session_state.page == "result":
 
         st.error("Your review did not qualify.")
 
-        if st.button("Try again"):
+        if st.button("Try again", type="primary"):
 
             go_to("review")
             st.rerun()
@@ -444,7 +452,11 @@ investment, verified reserves, or a guaranteed reward.
             "Your qualified review is still valid."
         )
 
-        if st.button("Continue without wallet"):
+        if st.button(
+            "Continue without wallet",
+            type="primary",
+            use_container_width=True,
+        ):
 
             log_once("completed")
 
@@ -460,7 +472,11 @@ investment, verified reserves, or a guaranteed reward.
     # No wallet / user chooses to continue
     # --------------------------------------------------
 
-    elif st.button("Continue without wallet"):
+    elif st.button(
+        "Continue without wallet",
+        type="primary",
+        use_container_width=True,
+    ):
 
         log_once("completed")
 
